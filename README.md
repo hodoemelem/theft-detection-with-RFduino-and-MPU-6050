@@ -1,1 +1,1 @@
-Bicycle theft detection system with RFduinoBLE and MPU-6050 IMU
+Bicycle theft detection code using MPU-6050 IMU activity threshold, altitude detection and RFduinoBLE

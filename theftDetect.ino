@@ -1,3 +1,9 @@
+/*
+ * Author: Henry Ugochukwwu Odoemelem
+ * Description: Bicycle theft detection code using MPU-6050 IMU activity threshold, altitude detection and RFduinoBLE
+ * DAte: 9-Jan-2019
+ */
+
 #include <RFduinoBLE.h>
 #include<Wire.h>
 #include <math.h>
@@ -213,10 +219,10 @@ void RFduinoBLE_onConnect()
     delay(1000);
   }
 
-  //to disable adxl interrupts, i.e do not check for motion, im the bike owner
+  //to disable adxl interrupts, i.e do not check for motion, i am the bike owner
   Wire.beginTransmission(adxl_addr);
   Wire.write(0x2E);//INT_ENABLE reg
-  Wire.write(0x00);  //disenable all interrupt
+  Wire.write(0x00);  //disable all interrupt
   Wire.endTransmission();
 
   //map all interrupt(if any!!!) to INT2 which is not in use in our case
